@@ -89,21 +89,20 @@ st.markdown("""
 # ==========================================
 @st.cache_resource
 def load_assets():
-    """Cache high-overhead serialization files to maximize platform rendering latency performance"""
-    base_dir = r"C:\Users\22010\AppData\Local\Programs\Python\Python313"
-    model_path = os.path.join(base_dir, "kmeans_model.pkl")
-    scaler_path = os.path.join(base_dir, "scaler.pkl")
+    """Cache high-overhead serialization files to maximize platform performance"""
+    # FIXED: Removed the hardcoded Windows path so it works seamlessly on GitHub Cloud
+    model_path = "kmeans_model.pkl"
+    scaler_path = "scaler.pkl"
     
     try:
         model = joblib.load(model_path)
         scaler = joblib.load(scaler_path)
         return model, scaler
     except FileNotFoundError:
-        st.error(f"🚨 Asset Missing: Verify 'kmeans_model.pkl' and 'scaler.pkl' reside inside: `{base_dir}`")
+        st.error("🚨 Asset Missing: Verify 'kmeans_model.pkl' and 'scaler.pkl' are placed in the root folder of your GitHub repository.")
         st.stop()
 
 kmeans, scaler = load_assets()
-
 # ==========================================
 # 3. GRANULAR CORPORATE INSIGHT DICTIONARY
 # ==========================================
