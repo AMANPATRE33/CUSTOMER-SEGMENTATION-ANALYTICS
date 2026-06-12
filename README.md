@@ -4,7 +4,7 @@
 
 An end-to-end unsupervised machine learning pipeline and interactive production intelligence dashboard designed to group consumer behavior profiles into distinct corporate marketing personas. This platform enables marketing managers and product teams to transition from broad blast-marketing to hyper-targeted, ROI-optimized customer retention and operations strategies.
 
-🎯 **Live Production Dashboard:** [Insert Your Streamlit App Link Here]
+🎯 **Live Production Dashboard:** (https://customer-segmentation-analytics-unsupervisedlearning.streamlit.app/)]
 
 ---
 
